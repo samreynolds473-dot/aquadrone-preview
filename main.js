@@ -87,4 +87,72 @@
   });
 
   $('#yr').textContent = new Date().getFullYear();
+
+  // homepage product stage — sector switcher
+  const shot = $('#stageShot');
+  if (shot) {
+    const slides = [
+      { img: 'assets/img/spray-orange.webp', alt: 'רחפן מתיז מים על חזית זכוכית', idx: '01', line: 'מבנים מסחריים — מגדלי משרדים, מלונות וקירות מסך, בלי פיגומים.', href: 'our-services/commercial/', focus: 'center 46%' },
+      { img: 'assets/img/envelope.webp', alt: 'מגדל מגורים עם חזית זכוכית', idx: '02', line: 'בתים ומגורים — ניקוי מהקרקע, בלי פיגומים מול החלונות ובלי עובדים על חבלים.', href: 'our-services/residential/', focus: 'center 42%' },
+      { img: 'assets/img/hero-poster.jpg', alt: 'רחפן מנקה קיר מסך זכוכית', idx: '03', line: 'סולארי וגגות — גישה לאזורים שקשה להגיע אליהם, ושטיפה במים מסוננים.', href: 'our-services/solar/', focus: 'center 62%' },
+      { img: 'assets/img/sector-industry.webp', alt: 'ניקוי קיר מבנה תעשייה ברחפן', idx: '04', line: 'תעשייה ותשתיות — משטחים גדולים ומורכבים, במהירות.', href: 'our-services/industry/', focus: 'center 70%' }
+    ];
+    const reflect = $('#stageReflect');
+    const idxEl = $('#stageIdx');
+    const lineEl = $('#stageLine');
+    const learn = $('#stageLearn');
+    const plate = $('#stagePlate');
+    const rails = $$('.rail a');
+    let i = 0;
+    let timer = 0;
+    slides.forEach(s => { const im = new Image(); im.src = s.img; });
+    const show = n => {
+      i = (n + slides.length) % slides.length;
+      const s = slides[i];
+      shot.style.opacity = '0';
+      if (reflect) reflect.style.opacity = '0';
+      clearTimeout(timer);
+      const apply = () => {
+        shot.src = s.img;
+        shot.alt = s.alt;
+        if (reflect) { reflect.src = s.img; reflect.style.opacity = ''; }
+        if (plate) plate.style.setProperty('--focus', s.focus);
+        const stage = $('#stage');
+        if (stage) stage.style.setProperty('--focus', s.focus);
+        if (idxEl) idxEl.textContent = s.idx;
+        if (lineEl) lineEl.textContent = s.line;
+        if (learn) learn.href = s.href;
+        rails.forEach((a, k) => {
+          const on = k === i;
+          a.classList.toggle('is-on', on);
+          if (on) a.setAttribute('aria-current', 'true');
+          else a.removeAttribute('aria-current');
+        });
+        shot.style.opacity = '';
+      };
+      timer = setTimeout(apply, reduce ? 0 : 180);
+    };
+    const prev = $('#stagePrev'), next = $('#stageNext');
+    if (prev) prev.addEventListener('click', () => show(i - 1));
+    if (next) next.addEventListener('click', () => show(i + 1));
+    rails.forEach(a => a.addEventListener('click', e => { e.preventDefault(); show(+a.dataset.i); }));
+    const stageEl = $('#stage');
+    if (stageEl) stageEl.addEventListener('keydown', e => {
+      if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return;
+      if (e.target.closest && e.target.closest('a, input, textarea, select')) return;
+      e.preventDefault();
+      show(e.key === 'ArrowRight' ? i + 1 : i - 1);
+    });
+    if (plate) {
+      let x0 = null;
+      plate.addEventListener('pointerdown', e => { x0 = e.clientX; });
+      plate.addEventListener('pointerup', e => {
+        if (x0 == null) return;
+        const dx = e.clientX - x0;
+        x0 = null;
+        if (Math.abs(dx) < 48) return;
+        show(dx < 0 ? i + 1 : i - 1);
+      });
+    }
+  }
 })();

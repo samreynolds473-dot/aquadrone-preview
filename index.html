@@ -6,14 +6,14 @@
 <title>אקוודרון | ניקוי חזיתות, חלונות וגגות ברחפן – ללא פיגומים</title>
 <meta name="description" content="אקוודרון מנקה חזיתות, חלונות, גגות ופאנלים סולאריים באמצעות רחפן – מהקרקע, בלי פיגומים, בלי חבלים ובלי סנפלינג.">
 <meta name="robots" content="noindex,nofollow">
-<meta name="theme-color" content="#0a0b0d">
+<meta name="theme-color" content="#000000">
 <link rel="icon" href="assets/logos/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="preload" as="image" href="assets/img/hero-poster.jpg">
-<link rel="stylesheet" href="styles.css?v=2">
+<link rel="preload" as="image" href="assets/img/spray-orange.webp">
+<link rel="stylesheet" href="styles.css?v=3">
 </head>
-<body>
+<body class="home">
 <!-- Icon sprite (original line icons) -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
  <defs>
@@ -44,10 +44,6 @@
  </defs>
 </svg>
 
-<div class="topbar"><b>ניקוי חזיתות ברחפן</b> · מהקרקע, ללא פיגומים, ללא חבלים וללא סנפלינג
-  <a href="https://wa.me/972534641133" target="_blank" rel="noopener">דברו איתנו בוואטסאפ <span><svg width="10" height="10"><use href="#i-arrow"/></svg></span></a>
-</div>
-
 <header class="header" id="header">
  <div class="wrap">
   <a class="logo" href="./" aria-label="אקוודרון – לדף הבית"><img src="assets/logos/aquadrone-wordmark.png" alt="AquaDrone" width="249" height="22"></a>
@@ -55,7 +51,6 @@
    <a href="our-services/">שירותים</a><a href="about/">אודות</a><a href="contact-us/">צור קשר</a>
   </nav>
   <div class="header-cta">
-   <a class="btn btn-ghost btn-sm" href="https://wa.me/972534641133" target="_blank" rel="noopener">וואטסאפ</a>
    <a class="btn btn-primary btn-sm" href="#contact">קבלו הצעת מחיר</a>
    <button class="burger" id="burger" aria-label="פתיחת תפריט"><i></i></button>
   </div>
@@ -64,73 +59,83 @@
 <div class="mnav" id="mnav">
  <button class="mnav-close" id="mclose" aria-label="סגירת תפריט">✕</button>
  <a href="our-services/">שירותים</a><a href="about/">אודות</a><a href="contact-us/">צור קשר</a>
+ <a href="https://wa.me/972534641133" target="_blank" rel="noopener">וואטסאפ</a>
  <a class="btn btn-primary" href="#contact">קבלו הצעת מחיר</a>
 </div>
 
 <main id="top">
-<!-- HERO -->
-<section class="hero">
- <img class="poster" src="assets/img/hero-poster.jpg" alt="">
- <video id="heroVideo" autoplay muted loop playsinline preload="auto" poster="assets/img/hero-poster.jpg" data-src-desktop="assets/video/hero.mp4" data-src-mobile="assets/video/hero-720.mp4"></video>
- <div class="wrap">
-  <h1><span>ניקוי חזיתות</span><span>וחלונות בגובה.</span><span class="accent">מהאוויר.</span></h1>
-  <div class="hero-side">
-   <p>אקוודרון מנקה חזיתות, חלונות, גגות ופאנלים סולאריים באמצעות רחפן – פתרון מתקדם, בטוח וחסכוני, בלי פיגומים, חבלים וסיכונים.</p>
-   <a class="btn btn-primary btn-lg" href="#contact">קבלו הצעת מחיר <svg><use href="#i-arrow"/></svg></a>
+<section class="stage" id="stage" style="--focus:center 46%">
+ <div class="stage-copy">
+  <p class="eyebrow" dir="ltr">AQUADRONE · FACADE SYSTEM</p>
+  <h1><b>ניקוי חזיתות</b> <span>מהאוויר</span></h1>
+  <p class="stage-spec" id="stageSpec" aria-live="polite"><span id="stageIdx" dir="ltr">01</span><span id="stageLine">מבנים מסחריים — מגדלי משרדים, מלונות וקירות מסך, בלי פיגומים.</span></p>
+  <div class="stage-actions">
+   <a class="btn btn-primary btn-lg" href="#contact">קבלו הצעת מחיר</a>
+   <a class="btn btn-ghost btn-lg" id="stageLearn" href="our-services/commercial/">לפרטים</a>
   </div>
  </div>
- <div class="hero-scroll" aria-hidden="true"></div>
+ <div class="stage-plate" id="stagePlate">
+  <img class="stage-shot" id="stageShot" src="assets/img/spray-orange.webp" alt="רחפן מתיז מים על חזית זכוכית" fetchpriority="high">
+  <img class="stage-reflect" id="stageReflect" src="assets/img/spray-orange.webp" alt="" aria-hidden="true">
+ </div>
+ <div class="stage-vignette" aria-hidden="true"></div>
+ <button class="orb orb-prev" type="button" id="stagePrev" aria-label="הסקטור הקודם"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.5 5.5 8 12l6.5 6.5"/></svg></button>
+ <button class="orb orb-next" type="button" id="stageNext" aria-label="הסקטור הבא"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9.5 5.5 16 12l-6.5 6.5"/></svg></button>
+ <nav class="rail" aria-label="סקטורים">
+  <a href="our-services/commercial/" data-i="0" class="is-on" aria-current="true"><i>01</i><span>מבנים מסחריים</span></a>
+  <a href="our-services/residential/" data-i="1"><i>02</i><span>בתים ומגורים</span></a>
+  <a href="our-services/solar/" data-i="2"><i>03</i><span>סולארי וגגות</span></a>
+  <a href="our-services/industry/" data-i="3"><i>04</i><span>תעשייה ותשתיות</span></a>
+ </nav>
+ <a class="reel" href="#results" aria-label="לצפייה בניקוי בשטח"><img src="assets/img/wall-poster.jpg" alt=""><span class="play" aria-hidden="true"></span><span class="reel-tag" dir="ltr">FIELD</span></a>
 </section>
 
-<!-- SECTORS -->
-<section class="light pad sectors" id="sectors">
+<section class="meters rv" id="why" aria-label="יכולות">
+ <article><p class="k" dir="ltr">TIME</p><div class="big"><span class="count" data-to="80">0</span><small>%</small></div><h3>קיצור זמן הביצוע</h3><p>עד 80% פחות זמן עבודה לעומת שיטות מסורתיות</p></article>
+ <article><p class="k" dir="ltr">SPEED</p><div class="big"><small>×</small><span class="count" data-to="4">0</span></div><h3>מהיר יותר</h3><p>ניקוי מהיר פי 4 משיטות הניקוי המסורתיות</p></article>
+ <article><p class="k" dir="ltr">COVERAGE</p><div class="big"><span class="count" data-to="360">0</span><small>°</small></div><h3>כיסוי מלא</h3><p>ניקוי מקיף של כל מעטפת המבנה</p></article>
+ <article><p class="k" dir="ltr">GROUND</p><div class="big"><span>0</span></div><h3>פיגומים וחבלים</h3><p>הצוות עובד מהקרקע – בלי סנפלינג ובלי סיכון</p></article>
+</section>
+
+<section class="block" id="sectors">
  <div class="wrap">
-  <div class="intro rv">
-   <p class="eyebrow">Facade · Windows · Roofs · Solar</p>
-   <h2 class="h2" style="margin-top:14px">ניקוי חכם לכל סוג מבנה.<br>בלי סנפלינג ובלי פשרות.</h2>
+  <div class="block-top rv">
+   <div>
+    <p class="eyebrow" dir="ltr">SECTORS · 04</p>
+    <h2 class="h2">ניקוי חכם לכל סוג מבנה.<br><span class="lite">בלי סנפלינג ובלי פשרות.</span></h2>
+   </div>
    <p class="lead">שיטה חדשה לניקוי חזיתות בגובה – שמביאה איתה דיוק, בטיחות וזמני ביצוע קצרים. השיטה, המים, הלחץ והסבון מותאמים לכל מבנה.</p>
-   <a class="btn btn-dark" href="#contact">לתיאום הדגמה <svg><use href="#i-arrow"/></svg></a>
   </div>
-  <div class="sector-list">
-   <a class="sector open rv d1" href="our-services/commercial/">
-    <div class="txt"><h3><span class="plus"><svg><use href="#i-plus"/></svg></span>מבנים מסחריים</h3>
-     <div class="desc"><div>מגדלי משרדים, בתי מלון ומרכזים מסחריים – ניקוי חלונות, קירות מסך וחיפויים בגובה, עם הפרעה מינימלית לשגרת הנכס.</div></div></div>
-    <div class="thumb"><img src="assets/img/sector-commercial.webp" alt="מגדל משרדים עם חזית זכוכית" loading="lazy"></div>
+  <div class="matrix">
+   <a class="mx" href="our-services/commercial/">
+    <div class="mx-media"><img src="assets/img/sector-commercial.webp" alt="מגדל משרדים עם חזית זכוכית" loading="lazy"></div>
+    <div class="mx-body"><span class="k" dir="ltr">01</span><h3>מבנים מסחריים</h3><p>מגדלי משרדים, בתי מלון ומרכזים מסחריים – ניקוי חלונות, קירות מסך וחיפויים בגובה, עם הפרעה מינימלית לשגרת הנכס.</p><span class="mx-go">לשירות <svg><use href="#i-arrow"/></svg></span></div>
    </a>
-   <a class="sector rv d2" href="our-services/residential/">
-    <div class="txt"><h3><span class="plus"><svg><use href="#i-plus"/></svg></span>בתים ומגורים</h3>
-     <div class="desc"><div>מגדלי מגורים, בניינים ובתים פרטיים – ניקוי מהקרקע, בלי פיגומים מול החלונות ובלי עובדים תלויים על חבלים.</div></div></div>
-    <div class="thumb"><img src="assets/img/sector-residential.webp" alt="חזית מגדל מגורים לבן" loading="lazy"></div>
+   <a class="mx" href="our-services/residential/">
+    <div class="mx-media"><img src="assets/img/sector-residential.webp" alt="חזית מגדל מגורים לבן" loading="lazy"></div>
+    <div class="mx-body"><span class="k" dir="ltr">02</span><h3>בתים ומגורים</h3><p>מגדלי מגורים, בניינים ובתים פרטיים – ניקוי מהקרקע, בלי פיגומים מול החלונות ובלי עובדים תלויים על חבלים.</p><span class="mx-go">לשירות <svg><use href="#i-arrow"/></svg></span></div>
    </a>
-   <a class="sector rv d3" href="our-services/solar/">
-    <div class="txt"><h3><span class="plus"><svg><use href="#i-plus"/></svg></span>סולארי וגגות</h3>
-     <div class="desc"><div>פאנלים סולאריים וגגות – גישה לאזורים שקשה להגיע אליהם ושטיפה סופית במים מסוננים, ללא כתמי מים.</div></div></div>
+   <a class="mx" href="our-services/solar/">
     <!-- PLACEHOLDER: no approved solar/roof photo on the live site yet. Replace this graphic with a real AquaDrone solar/roof photo. -->
-    <div class="thumb thumb-solar" aria-label="המחשה גרפית – מקום לתמונה">
-     <svg viewBox="0 0 160 120" fill="none"><g transform="skewX(-18) translate(30 0)"><g stroke="#6fb8e0" stroke-width="1.2" fill="rgba(67,195,243,.12)"><rect x="10" y="40" width="40" height="26"/><rect x="54" y="40" width="40" height="26"/><rect x="98" y="40" width="40" height="26"/><rect x="10" y="70" width="40" height="26"/><rect x="54" y="70" width="40" height="26"/><rect x="98" y="70" width="40" height="26"/></g><g stroke="#6fb8e0" stroke-width=".6" opacity=".6"><path d="M23 40v26M37 40v26M67 40v26M81 40v26M111 40v26M125 40v26M23 70v26M37 70v26M67 70v26M81 70v26M111 70v26M125 70v26M10 53h128M10 83h128"/></g></g><g stroke="#e7f6ff" stroke-width="1.3"><circle cx="70" cy="16" r="5"/><circle cx="96" cy="16" r="5"/><path d="M75 16h16M78 16v6h10v-6"/></g><path d="M83 23l-12 18M83 23l0 18M83 23l12 18" stroke="#43c3f3" stroke-dasharray="2 2"/></svg>
-     <span class="ph-tag">PLACEHOLDER · תמונה</span>
+    <div class="mx-media mx-solar" aria-label="המחשה גרפית – מקום לתמונה">
+     <svg viewBox="0 0 160 120" fill="none"><g transform="skewX(-18) translate(30 0)"><g stroke="#8eb4ff" stroke-width="1.2" fill="rgba(49,94,245,.16)"><rect x="10" y="40" width="40" height="26"/><rect x="54" y="40" width="40" height="26"/><rect x="98" y="40" width="40" height="26"/><rect x="10" y="70" width="40" height="26"/><rect x="54" y="70" width="40" height="26"/><rect x="98" y="70" width="40" height="26"/></g><g stroke="#8eb4ff" stroke-width=".6" opacity=".6"><path d="M23 40v26M37 40v26M67 40v26M81 40v26M111 40v26M125 40v26M23 70v26M37 70v26M67 70v26M81 70v26M111 70v26M125 70v26M10 53h128M10 83h128"/></g></g><g stroke="#e7f6ff" stroke-width="1.3"><circle cx="70" cy="16" r="5"/><circle cx="96" cy="16" r="5"/><path d="M75 16h16M78 16v6h10v-6"/></g><path d="M83 23l-12 18M83 23l0 18M83 23l12 18" stroke="#315ef5" stroke-dasharray="2 2"/></svg>
+     <span class="ph-tag" dir="ltr">PLACEHOLDER · תמונה</span>
     </div>
+    <div class="mx-body"><span class="k" dir="ltr">03</span><h3>סולארי וגגות</h3><p>פאנלים סולאריים וגגות – גישה לאזורים שקשה להגיע אליהם ושטיפה סופית במים מסוננים, ללא כתמי מים.</p><span class="mx-go">לשירות <svg><use href="#i-arrow"/></svg></span></div>
    </a>
-   <a class="sector rv d4" href="our-services/industry/">
-    <div class="txt"><h3><span class="plus"><svg><use href="#i-plus"/></svg></span>תעשייה ותשתיות</h3>
-     <div class="desc"><div>מפעלים ומבני תעשייה, מוסדות ציבור, תשתיות ושלטי חוצות – ניקוי משטחים גדולים ומורכבים במהירות.</div></div></div>
-    <div class="thumb"><img src="assets/img/sector-industry.webp" alt="ניקוי קיר מבנה תעשייה ברחפן" loading="lazy"></div>
+   <a class="mx" href="our-services/industry/">
+    <div class="mx-media"><img src="assets/img/sector-industry.webp" alt="ניקוי קיר מבנה תעשייה ברחפן" loading="lazy"></div>
+    <div class="mx-body"><span class="k" dir="ltr">04</span><h3>תעשייה ותשתיות</h3><p>מפעלים ומבני תעשייה, מוסדות ציבור, תשתיות ושלטי חוצות – ניקוי משטחים גדולים ומורכבים במהירות.</p><span class="mx-go">לשירות <svg><use href="#i-arrow"/></svg></span></div>
    </a>
   </div>
  </div>
 </section>
 
-<!-- STATS -->
-<section class="dark stats" id="why">
- <div class="wrap center">
-  <h2 class="h2 rv">לנקות בגובה – <span class="grad-text">בלי לעלות לגובה</span></h2>
-  <p class="lead rv d1" style="margin-top:16px">מה משתנה כשמחליפים פיגומים וסנפלינג ברחפן ניקוי</p>
-  <div class="stat-strip">
-   <div class="stat rv d1"><div class="big"><span class="count" data-to="80">0</span><small>%</small></div><h4>קיצור זמן הביצוע</h4><p>עד 80% פחות זמן עבודה לעומת שיטות מסורתיות</p></div>
-   <div class="stat rv d2"><div class="big"><small style="margin:0 2px 0 0">×</small><span class="count" data-to="4">0</span></div><h4>מהיר יותר</h4><p>ניקוי מהיר פי 4 משיטות הניקוי המסורתיות</p></div>
-   <div class="stat rv d3"><div class="big"><span class="count" data-to="360">0</span><small>°</small></div><h4>כיסוי מלא</h4><p>ניקוי מקיף של כל מעטפת המבנה</p></div>
-   <div class="stat rv d4"><div class="big"><span>0</span></div><h4>פיגומים וחבלים</h4><p>הצוות עובד מהקרקע – בלי סנפלינג ובלי סיכון</p></div>
-  </div>
+<section class="dark" id="ops">
+ <div class="wrap center" style="padding-top:clamp(72px,8vw,110px)">
+  <p class="eyebrow rv" dir="ltr">ON TARGET</p>
+  <h2 class="h2 rv" style="margin-top:12px">לנקות בגובה. <span class="lite">בלי לעלות לגובה.</span></h2>
+  <p class="lead rv" style="margin:16px auto 0">מה משתנה כשמחליפים פיגומים וסנפלינג ברחפן ניקוי</p>
  </div>
  <div class="scene">
   <img src="assets/img/stats-bg.webp" alt="רחפן אקוודרון מול חזית זכוכית" loading="lazy">
@@ -138,7 +143,7 @@
   <div class="hotspot rv d2" style="top:40%;left:14%"><span class="dot"></span><span class="tag"><i><svg><use href="#i-chip"/></svg></i><span><em>AI</em>זיהוי לכלוך חכם</span></span></div>
   <div class="hotspot rv d3" style="top:58%;right:30%"><span class="dot"></span><span class="tag"><i><svg><use href="#i-drop"/></svg></i><span><em>RO</em>מים באוסמוזה הפוכה</span></span></div>
   <div class="hotspot rv d4" style="top:20%;left:38%"><span class="dot"></span><span class="tag"><i><svg><use href="#i-spray"/></svg></i><span><em>HIGH PRESSURE</em>התזה מדויקת</span></span></div>
-  <h2 class="h2 rv">מהיר יותר. בטוח יותר.<br><span class="accent">נקי יותר.</span></h2>
+  <h2 class="h2 rv">מהיר יותר. בטוח יותר.<br><span class="lite">נקי יותר.</span></h2>
  </div>
  <div class="wrap" style="padding-bottom:clamp(80px,9vw,130px)">
   <div class="benefits">
@@ -156,8 +161,8 @@
 <section class="dark pad" id="results" style="padding-top:0">
  <div class="wrap">
   <div class="center">
-   <p class="eyebrow rv">PURE precision</p>
-   <h2 class="h2 rv d1" style="margin-top:14px">רואים תוצאה. <span class="accent">מרגישים הבדל.</span></h2>
+   <p class="eyebrow rv" dir="ltr">BEFORE / AFTER</p>
+   <h2 class="h2 rv d1" style="margin-top:14px">רואים תוצאה. <span class="lite">מרגישים הבדל.</span></h2>
    <p class="lead rv d2" style="margin-top:16px">גררו את הסליידר כדי להשוות את הקיר לפני ואחרי מעבר הרחפן.</p>
   </div>
   <div class="ba-grid">
@@ -175,21 +180,20 @@
  </div>
 </section>
 
-<!-- PURPOSE BUILT -->
-<section class="light pad" id="tech">
+<section class="dark pad" id="tech">
  <div class="wrap">
   <div class="center">
-   <p class="eyebrow rv">Purpose built</p>
-   <h2 class="h2 rv d1" style="margin-top:14px">טכנולוגיה חכמה לניקיון מדויק</h2>
+   <p class="eyebrow rv" dir="ltr">PURPOSE BUILT</p>
+   <h2 class="h2 rv d1" style="margin-top:14px">טכנולוגיה חכמה <span class="lite">לניקיון מדויק</span></h2>
    <p class="lead rv d2" style="margin-top:16px">מערכת אחת שמשלבת רחפן עוצמתי, טיפול מים מתקדם וסבון ייעודי – כדי שהחזית תיראה נקייה, בלי סימנים.</p>
   </div>
-  <div class="pb-grid">
-   <div class="pcard rv"><span class="icon"><svg><use href="#i-drop"/></svg></span><h3>מערכת מים מתקדמת</h3><p>מים טהורים בטכנולוגיית אוסמוזה הפוכה – לניקוי בלי סימנים וללא כתמי מים.</p></div>
-   <div class="pcard rv d1"><span class="icon"><svg><use href="#i-leaf"/></svg></span><h3>סבון חכם ואקולוגי</h3><p>סבון פעיל מתכלה, עוצמתי ומותאם לכל סוג חזית.</p></div>
-   <div class="pcard rv d2"><span class="icon"><svg><use href="#i-drone"/></svg></span><h3>רחפן עוצמתי</h3><p>התזת מים בלחץ גבוה ומדויק, גם במקומות שקשה להגיע אליהם.</p></div>
-   <div class="pcard rv d3"><span class="icon"><svg><use href="#i-eye"/></svg></span><h3>בקר טיסה חכם</h3><p>צילום 4K ובינה מלאכותית לזיהוי לכלוך – ניקוי ממוקד במקום הנכון.</p></div>
+  <div class="spec4">
+   <article class="rv"><span class="k" dir="ltr">RO</span><h3>מערכת מים מתקדמת</h3><p>מים טהורים בטכנולוגיית אוסמוזה הפוכה – לניקוי בלי סימנים וללא כתמי מים.</p></article>
+   <article class="rv d1"><span class="k" dir="ltr">BIO</span><h3>סבון חכם ואקולוגי</h3><p>סבון פעיל מתכלה, עוצמתי ומותאם לכל סוג חזית.</p></article>
+   <article class="rv d2"><span class="k" dir="ltr">SPRAY</span><h3>רחפן עוצמתי</h3><p>התזת מים בלחץ גבוה ומדויק, גם במקומות שקשה להגיע אליהם.</p></article>
+   <article class="rv d3"><span class="k" dir="ltr">4K · AI</span><h3>בקר טיסה חכם</h3><p>צילום 4K ובינה מלאכותית לזיהוי לכלוך – ניקוי ממוקד במקום הנכון.</p></article>
   </div>
-  <div class="center rv"><a class="btn btn-dark" href="#contact">לתיאום הדגמה <svg><use href="#i-arrow"/></svg></a></div>
+  <div class="center rv" style="margin-top:28px"><a class="btn btn-ghost" href="#contact">לתיאום הדגמה <svg><use href="#i-arrow"/></svg></a></div>
 
   <div class="banner rv">
    <video class="lazyvid" muted loop playsinline preload="none" poster="assets/img/commercial-poster.jpg" data-src="assets/video/commercial.mp4"></video>
@@ -205,7 +209,7 @@
 
 <!-- PARTNERS -->
 <!-- CONFIRM: partner logos taken from the live site's partners slider (Apellix logo removed). Confirm list/permissions before launch. -->
-<section class="light partners" style="padding-top:0">
+<section class="partners" style="padding-top:0">
  <div class="wrap center">
   <h2 class="h2 rv" style="font-size:clamp(26px,2.6vw,36px)">יוצרים חדשנות לצד הטובים ביותר</h2>
  </div>
@@ -218,7 +222,7 @@
 <!-- SYSTEMS -->
 <section class="dark pad systems">
  <div class="wrap">
-  <h2 class="h2 center rv">מערכת ניקוי <span class="grad-text">מקצה לקצה</span></h2>
+  <h2 class="h2 center rv">מערכת ניקוי <span class="lite">מקצה לקצה</span></h2>
   <article class="sys rv">
    <div class="sys-head"><span class="eyebrow">רחפן ניקוי</span><span class="sys-name">AQUA<b>DRONE</b> · SPRAY</span><a class="pill-link" href="#contact">לפרטים <svg width="14" height="14"><use href="#i-arrow"/></svg></a></div>
    <div class="sys-body">
@@ -262,7 +266,7 @@
 <section class="dark pad" id="process" style="padding-top:0">
  <div class="wrap">
   <div class="center">
-   <p class="eyebrow rv">How it works</p>
+   <p class="eyebrow rv" dir="ltr">SEQUENCE · 04</p>
    <h2 class="h2 rv d1" style="margin-top:14px">איך זה עובד?</h2>
    <p class="lead rv d2" style="margin-top:16px">ארבעה שלבים פשוטים – מסקר ראשוני ועד חזית נקייה.</p>
   </div>
@@ -276,13 +280,13 @@
 </section>
 
 <!-- FAQ -->
-<section class="light pad faq" id="faq">
+<section class="dark pad faq" id="faq">
  <div class="wrap">
   <div class="intro rv">
-   <p class="eyebrow">FAQ</p>
-   <h2 class="h2" style="margin-top:14px">יש לכם שאלות?<br>יש לנו תשובות.</h2>
+   <p class="eyebrow" dir="ltr">FAQ</p>
+   <h2 class="h2" style="margin-top:14px">יש לכם שאלות?<br><span class="lite">יש לנו תשובות.</span></h2>
    <p class="lead">לא מצאתם את מה שחיפשתם? דברו איתנו ונשמח לעזור.</p>
-   <a class="btn btn-dark" href="#contact">דברו איתנו <svg><use href="#i-arrow"/></svg></a>
+   <a class="btn btn-ghost" href="#contact">דברו איתנו <svg><use href="#i-arrow"/></svg></a>
   </div>
   <div class="qa-list rv d1">
    <div class="qa open"><button aria-expanded="true">אילו סוגי מבנים אפשר לנקות עם רחפן?<span class="pm"><svg><use href="#i-plus"/></svg></span></button><div class="a"><div><p>מגדלי מגורים ומשרדים, בתי מלון, קניונים ומרכזים מסחריים, שלטי חוצות, מבני תעשייה ומפעלים, פאנלים סולאריים, מוסדות ציבור ותשתיות. בכל מבנה אנחנו מתאימים את שיטת העבודה, סוג המים, עוצמת הלחץ והסבון.</p></div></div></div>
@@ -301,9 +305,12 @@
  <div class="wrap">
   <div class="rv">
    <p class="eyebrow">Contact</p>
-   <h2 style="margin-top:14px"><span class="accent">רוצים לשמוע עוד?</span><br>בואו נדבר.</h2>
+   <h2 style="margin-top:14px"><span class="lite">רוצים לשמוע עוד?</span><br>בואו נדבר.</h2>
    <p class="lead">השאירו פרטים ונחזור אליכם עם מידע מדויק, הצעת מחיר וייעוץ ראשוני – ללא התחייבות.</p>
-   <a class="wa" href="https://wa.me/972534641133" target="_blank" rel="noopener"><span class="icon" style="color:#fff"><svg><use href="#i-wa"/></svg></span><span>או בוואטסאפ<br><span class="num">053-464-1133</span></span></a>
+   <div class="points">
+    <a href="https://wa.me/972534641133" target="_blank" rel="noopener"><span dir="ltr">053-464-1133</span><small>וואטסאפ</small></a>
+    <a href="mailto:info@aquadrone.co.il"><span dir="ltr">info@aquadrone.co.il</span><small>אימייל</small></a>
+   </div>
   </div>
   <div class="form rv d2" id="formBox">
    <!-- PREVIEW ONLY: this form does not submit anywhere. Wire it to a backend / CRM / email service before launch. -->
@@ -336,7 +343,7 @@
    <div class="brand"><img src="assets/logos/aquadrone-wordmark.png" alt="AquaDrone"><p>חדשנות בניקוי מבנים <span class="accent">זאת רק ההתחלה.</span></p></div>
    <div><h5>ניווט</h5><ul><li><a href="./">דף הבית</a></li><li><a href="our-services/">שירותים</a></li><li><a href="about/">אודות</a></li><li><a href="contact-us/">צור קשר</a></li></ul></div>
    <div><h5>שירותים</h5><ul><li><a href="our-services/commercial/">מבנים מסחריים</a></li><li><a href="our-services/residential/">בתים ומגורים</a></li><li><a href="our-services/solar/">סולארי וגגות</a></li><li><a href="our-services/industry/">תעשייה ותשתיות</a></li></ul></div>
-   <div><h5>צור קשר</h5><ul><li><a href="https://wa.me/972534641133" target="_blank" rel="noopener" dir="ltr">053-464-1133</a></li><li><a href="contact-us/">קבלו הצעת מחיר</a></li><li>פעילים בכל רחבי הארץ</li></ul></div>
+   <div><h5>צור קשר</h5><ul><li><a href="https://wa.me/972534641133" target="_blank" rel="noopener" dir="ltr">053-464-1133</a></li><li><a href="mailto:info@aquadrone.co.il" dir="ltr">info@aquadrone.co.il</a></li><li><a href="contact-us/">קבלו הצעת מחיר</a></li><li>פעילים בכל רחבי הארץ</li></ul></div>
   </div>
   <div class="bottom">
    <span>© <span id="yr">2026</span> AquaDrone · כל הזכויות שמורות</span>
@@ -350,6 +357,6 @@
   </div>
  </div>
 </footer>
-<script src="main.js?v=2" defer></script>
+<script src="main.js?v=3" defer></script>
 </body>
 </html>
