@@ -38,12 +38,15 @@
   }), { rootMargin: '200px' });
   $$('.lazyvid').forEach(v => vio.observe(v));
 
-  // sectors accordion
-  $$('.sector').forEach(s => s.addEventListener('click', () => {
-    const open = s.classList.contains('open');
-    $$('.sector').forEach(x => x.classList.remove('open'));
-    if (!open) s.classList.add('open');
-  }));
+  // sectors accordion — linked cards navigate; unlinked cards still toggle
+  $$('.sector').forEach(s => {
+    if (s.tagName === 'A') return;
+    s.addEventListener('click', () => {
+      const open = s.classList.contains('open');
+      $$('.sector').forEach(x => x.classList.remove('open'));
+      if (!open) s.classList.add('open');
+    });
+  });
 
   // FAQ
   $$('.qa button').forEach(b => b.addEventListener('click', () => {
@@ -68,7 +71,7 @@
 
   // lead form — PREVIEW ONLY, not wired to any backend
   const form = $('#leadForm');
-  form.addEventListener('submit', e => {
+  if (form) form.addEventListener('submit', e => {
     e.preventDefault();
     let ok = true;
     $$('[required]', form).forEach(f => {
