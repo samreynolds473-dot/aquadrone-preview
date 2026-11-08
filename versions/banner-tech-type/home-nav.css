@@ -1,0 +1,45 @@
+/* Homepage-only services dropdown. Loaded from previous/index.html only. */
+.nav-svc{position:relative;display:inline-flex;align-items:center;gap:2px}
+.nav-svc-btn{display:grid;place-items:center;width:28px;height:28px;margin:0;padding:0;border:0;border-radius:50%;background:transparent;color:rgba(255,255,255,.82);cursor:pointer}
+.nav-svc-btn svg{display:block;transition:transform .2s ease}
+.nav-svc:hover > .nav-svc-btn,
+.nav-svc:focus-within > .nav-svc-btn,
+.nav-svc.is-open > .nav-svc-btn{color:#fff}
+.nav-svc:hover > .nav-svc-btn svg,
+.nav-svc:focus-within > .nav-svc-btn svg,
+.nav-svc.is-open > .nav-svc-btn svg{transform:rotate(180deg)}
+.nav .nav-svc:hover > a,
+.nav .nav-svc:focus-within > a,
+.nav .nav-svc.is-open > a{color:#fff}
+.nav .nav-svc:hover > a::after,
+.nav .nav-svc:focus-within > a::after,
+.nav .nav-svc.is-open > a::after{transform:scaleX(1)}
+.nav-svc-menu{display:none;position:absolute;z-index:30;top:100%;inset-inline-start:0;padding-top:16px;min-width:max(100%,228px)}
+.nav-svc:hover > .nav-svc-menu,
+.nav-svc:focus-within > .nav-svc-menu,
+.nav-svc.is-open > .nav-svc-menu{display:block}
+.nav-svc.is-dismissed > .nav-svc-menu{display:none}
+.nav-svc-panel{background:rgba(10,11,13,.94);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:8px;box-shadow:0 18px 40px rgba(0,0,0,.38)}
+.nav .nav-svc-panel a{display:flex;align-items:center;min-height:42px;padding:8px 14px;border-radius:10px;color:rgba(255,255,255,.9);font-size:15px;font-weight:500;white-space:nowrap}
+.nav .nav-svc-panel a::after{display:none}
+.nav .nav-svc-panel a:hover,
+.nav .nav-svc-panel a:focus-visible{background:rgba(67,195,243,.16);color:#fff;outline:2px solid #43c3f3;outline-offset:2px}
+.nav-svc-btn:focus-visible,
+.nav .nav-svc > a:focus-visible,
+.mnav-svc-btn:focus-visible,
+.mnav-svc-menu a:focus-visible{outline:2px solid #43c3f3;outline-offset:3px}
+
+.mnav-svc-row{display:flex;align-items:center;gap:8px;border-bottom:1px solid var(--line)}
+.mnav .mnav-svc-row > a{flex:1;border-bottom:0}
+.mnav-svc-btn{flex:none;width:44px;height:44px;display:grid;place-items:center;border:1px solid rgba(255,255,255,.35);border-radius:50%;background:transparent;color:#fff;cursor:pointer}
+.mnav-svc-btn svg{display:block;transition:transform .2s ease}
+.mnav-svc.is-open .mnav-svc-btn svg{transform:rotate(180deg)}
+.mnav-svc-menu{display:none;flex-direction:column;padding:4px 0 8px}
+.mnav-svc.is-open .mnav-svc-menu{display:flex}
+.mnav .mnav-svc-menu a{font-size:18px;font-weight:500;padding:12px 12px 12px 0;border-bottom:0;color:rgba(255,255,255,.82)}
+.mnav .mnav-svc-menu a:hover,
+.mnav .mnav-svc-menu a:focus-visible{color:#43c3f3}
+
+@media (prefers-reduced-motion:reduce){
+  .nav-svc-btn svg,.mnav-svc-btn svg{transition:none}
+}
