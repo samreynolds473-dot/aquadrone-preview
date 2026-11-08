@@ -12,6 +12,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="preload" as="image" href="assets/img/hero-poster.jpg">
 <link rel="stylesheet" href="styles.css?v=2">
+<link rel="stylesheet" href="home-nav.css?v=1">
 </head>
 <body>
 <!-- Icon sprite (original line icons) -->
@@ -52,7 +53,19 @@
  <div class="wrap">
   <a class="logo" href="./" aria-label="אקוודרון – לדף הבית"><img src="assets/logos/aquadrone-wordmark.png" alt="AquaDrone" width="249" height="22"></a>
   <nav class="nav" aria-label="ניווט ראשי">
-   <a href="our-services/">שירותים</a><a href="about/">אודות</a><a href="contact-us/">צור קשר</a>
+   <div class="nav-svc" id="navSvc">
+    <a href="our-services/">שירותים</a>
+    <button type="button" class="nav-svc-btn" id="navSvcBtn" aria-expanded="false" aria-controls="navSvcMenu" aria-haspopup="true" aria-label="פתיחת רשימת השירותים"><svg viewBox="0 0 12 12" width="10" height="10" aria-hidden="true"><path d="M2.2 4.3 6 8.1 9.8 4.3" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+    <div class="nav-svc-menu" id="navSvcMenu">
+     <div class="nav-svc-panel">
+      <a href="our-services/commercial/">מבנים מסחריים</a>
+      <a href="our-services/residential/">בתים ומגורים</a>
+      <a href="our-services/solar/">סולארי וגגות</a>
+      <a href="our-services/industry/">תעשייה ותשתיות</a>
+     </div>
+    </div>
+   </div>
+   <a href="about/">אודות</a><a href="contact-us/">צור קשר</a>
   </nav>
   <div class="header-cta">
    <a class="btn btn-ghost btn-sm" href="https://wa.me/972534641133" target="_blank" rel="noopener">וואטסאפ</a>
@@ -63,7 +76,19 @@
 </header>
 <div class="mnav" id="mnav">
  <button class="mnav-close" id="mclose" aria-label="סגירת תפריט">✕</button>
- <a href="our-services/">שירותים</a><a href="about/">אודות</a><a href="contact-us/">צור קשר</a>
+ <div class="mnav-svc" id="mnavSvc">
+  <div class="mnav-svc-row">
+   <a href="our-services/">שירותים</a>
+   <button type="button" class="mnav-svc-btn" id="mnavSvcBtn" aria-expanded="false" aria-controls="mnavSvcMenu" aria-haspopup="true" aria-label="פתיחת רשימת השירותים"><svg viewBox="0 0 12 12" width="12" height="12" aria-hidden="true"><path d="M2.2 4.3 6 8.1 9.8 4.3" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+  </div>
+  <div class="mnav-svc-menu" id="mnavSvcMenu">
+   <a href="our-services/commercial/">מבנים מסחריים</a>
+   <a href="our-services/residential/">בתים ומגורים</a>
+   <a href="our-services/solar/">סולארי וגגות</a>
+   <a href="our-services/industry/">תעשייה ותשתיות</a>
+  </div>
+ </div>
+ <a href="about/">אודות</a><a href="contact-us/">צור קשר</a>
  <a class="btn btn-primary" href="#contact">קבלו הצעת מחיר</a>
 </div>
 
@@ -351,5 +376,6 @@
  </div>
 </footer>
 <script src="main.js?v=2" defer></script>
+<script src="home-nav.js?v=1" defer></script>
 </body>
 </html>
