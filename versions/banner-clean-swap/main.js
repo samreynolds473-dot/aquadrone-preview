@@ -6,14 +6,14 @@
   const hv = $('#heroVideo');
   if (hv) { hv.src = innerWidth < 820 ? hv.dataset.srcMobile : hv.dataset.srcDesktop; hv.play().catch(() => {}); }
 
-  // footer portrait: reduced motion keeps the poster only
-  const fv = $('.footer-film video');
-  if (fv && reduce) {
-    fv.removeAttribute('autoplay');
-    fv.pause();
-    fv.removeAttribute('src');
-    $$('source', fv).forEach(s => s.remove());
-    fv.load();
+  // contact background: reduced motion keeps the poster only
+  const cv = $('.contact > video');
+  if (cv && reduce) {
+    cv.removeAttribute('autoplay');
+    cv.pause();
+    cv.removeAttribute('src');
+    $$('source', cv).forEach(s => s.remove());
+    cv.load();
   }
 
   // header
