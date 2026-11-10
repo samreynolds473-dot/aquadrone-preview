@@ -362,6 +362,7 @@ section{position:relative}
 .info-item strong,.info-item a{display:block;font-size:17px;font-weight:600;line-height:1.35;text-align:right;overflow-wrap:anywhere}
 .info-item a:hover{color:var(--aqua)}
 .info-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+/* Social icons sit beside the WhatsApp action and wrap on small screens. */
 .soc-line{display:flex;flex-wrap:wrap;align-items:center;gap:14px}
 .soc-row{display:flex;direction:ltr;flex-wrap:wrap;align-items:center;gap:10px}
 .soc-row a{width:52px;height:52px;border-radius:14px;background:#1a1d22;border:1px solid rgba(255,255,255,.08);color:#9aa3ad;display:grid;place-items:center;transition:color .2s,border-color .2s,box-shadow .2s}
