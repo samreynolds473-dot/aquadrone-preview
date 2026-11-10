@@ -13,7 +13,7 @@
 <link rel="stylesheet" href="styles.css?v=2">
 <link rel="stylesheet" href="home-nav.css?v=1">
 <link rel="stylesheet" href="home-hero.css?v=10">
-<link rel="stylesheet" href="v2.css?v=6">
+<link rel="stylesheet" href="v2.css?v=7">
 </head>
 <body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -76,21 +76,17 @@
 
 <main id="top">
 <section class="hero">
- <video class="hero-vid hero-vid-wide" poster="assets/media/commercial-hero-wide-poster.jpg" muted autoplay loop playsinline preload="metadata">
-  <source src="assets/media/commercial-hero-wide.mp4" type="video/mp4">
- </video>
- <video class="hero-vid hero-vid-port" poster="assets/media/commercial-hero-portrait-poster.jpg" muted autoplay loop playsinline preload="metadata">
-  <source src="assets/media/commercial-hero-mobile.mp4" type="video/mp4">
- </video>
- <picture class="hero-still">
-  <source media="(max-width: 820px)" srcset="assets/media/commercial-hero-portrait-poster.jpg">
-  <img src="assets/media/commercial-hero-wide-poster.jpg" alt="רחפן שוטף חזית זכוכית" width="1920" height="1080">
+ <picture>
+  <source media="(max-width: 1300px)" srcset="assets/media/hero-mobile.jpg">
+  <img class="poster" src="assets/media/hero.jpg" alt="ניקוי מבנים מסחריים באמצעות רחפן" width="1920" height="1080">
  </picture>
  <div class="wrap">
-  <div class="hero-copy">
-   <h1><span>ניקוי מבני מסחר</span><span class="accent">ללא חבלים, פיגומים וסיכונים</span></h1>
-   <p>רחפנים לניקוי חזיתות – הדרך הבטוחה, היעילה והחכמה לשמור על מבנים נקיים</p>
-   <a class="btn btn-primary" href="../banner-clean-swap/contact-us/">ליצירת קשר <svg><use href="#i-arrow"/></svg></a>
+  <div class="hero-split">
+   <h1><span>מבנים מסחריים</span></h1>
+   <div class="hero-side">
+    <p>ניקוי ותחזוקה יעיל לחזיתות מסחריות – בלי פיגומים, בלי חבלים ובלי סיכונים</p>
+    <a class="btn btn-primary" href="../banner-clean-swap/contact-us/">קבלו הצעת מחיר <svg><use href="#i-arrow"/></svg></a>
+   </div>
   </div>
  </div>
 </section>
@@ -130,13 +126,22 @@
 
 <section class="dark pad svc-film" id="air">
  <div class="wrap">
-  <div class="center">
-   <h2 class="h2">ניקוי מבני מסחר<br><span class="accent">ללא חבלים, פיגומים וסיכונים</span></h2>
-   <p class="lead" style="margin-top:16px">רחפנים לניקוי חזיתות – הדרך הבטוחה, היעילה והחכמה לשמור על מבנים נקיים</p>
-   <a class="btn btn-primary btn-lg" style="margin-top:28px" href="https://aquadrone.co.il/contact-us/">ליצירת קשר <svg><use href="#i-arrow"/></svg></a>
-  </div>
-  <div class="media-card">
-   <video src="assets/media/commercial.mp4" poster="assets/media/commercial-poster.jpg" muted loop playsinline autoplay></video>
+  <div class="media-card air-panel">
+   <video class="air-vid air-vid-wide" poster="assets/media/commercial-hero-wide-poster.jpg" muted autoplay loop playsinline preload="metadata">
+    <source src="assets/media/commercial-hero-wide.mp4" type="video/mp4">
+   </video>
+   <video class="air-vid air-vid-port" poster="assets/media/commercial-hero-portrait-poster.jpg" muted autoplay loop playsinline preload="metadata">
+    <source src="assets/media/commercial-hero-mobile.mp4" type="video/mp4">
+   </video>
+   <picture class="air-still">
+    <source media="(max-width: 820px)" srcset="assets/media/commercial-hero-portrait-poster.jpg">
+    <img src="assets/media/commercial-hero-wide-poster.jpg" alt="רחפן שוטף חזית זכוכית" width="1920" height="1080">
+   </picture>
+   <div class="air-copy">
+    <h2 class="air-title"><span>ניקוי מבני מסחר</span><span class="accent">ללא חבלים, פיגומים וסיכונים</span></h2>
+    <p>רחפנים לניקוי חזיתות – הדרך הבטוחה, היעילה והחכמה לשמור על מבנים נקיים</p>
+    <a class="btn btn-primary" href="https://aquadrone.co.il/contact-us/">ליצירת קשר <svg><use href="#i-arrow"/></svg></a>
+   </div>
   </div>
  </div>
 </section>
@@ -204,7 +209,7 @@
   </div>
  </div>
 </footer>
-<script src="main.js?v=3" defer></script>
+<script src="main.js?v=4" defer></script>
 <script src="home-nav.js?v=1" defer></script>
 </body>
 </html>
