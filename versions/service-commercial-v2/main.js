@@ -102,5 +102,95 @@
     $('#formBox').classList.add('done');
   });
 
+  // Photo carousel under #air. Add a .film-slide figure in the HTML to extend it.
+  const carousel = $('#filmCarousel');
+  if (carousel) {
+    const slides = $$('.film-slide', carousel);
+    const dotsWrap = $('.film-dots', carousel);
+    let index = 0;
+    let timer = 0;
+    let paused = reduce;
+    let touching = false;
+    let startX = 0;
+    let dx = 0;
+    let pointerKind = 'mouse';
+    const show = i => {
+      index = (i + slides.length) % slides.length;
+      slides.forEach((s, n) => {
+        const on = n === index;
+        s.classList.toggle('is-active', on);
+        s.setAttribute('aria-hidden', on ? 'false' : 'true');
+      });
+      $$('.film-dot', dotsWrap).forEach((d, n) => {
+        const on = n === index;
+        d.classList.toggle('is-active', on);
+        d.setAttribute('aria-selected', on ? 'true' : 'false');
+      });
+    };
+    slides.forEach((s, n) => {
+      const b = document.createElement('button');
+      b.type = 'button';
+      b.className = 'film-dot';
+      b.setAttribute('role', 'tab');
+      b.setAttribute('aria-label', 'תמונה ' + (n + 1));
+      b.addEventListener('click', () => { show(n); restart(); });
+      dotsWrap.appendChild(b);
+    });
+    const next = () => show(index + 1);
+    const prev = () => show(index - 1);
+    $('.film-next', carousel).addEventListener('click', () => { next(); restart(); });
+    $('.film-prev', carousel).addEventListener('click', () => { prev(); restart(); });
+    carousel.addEventListener('keydown', e => {
+      // RTL: ArrowLeft moves forward through the slides, ArrowRight moves back.
+      if (e.key === 'ArrowLeft') { e.preventDefault(); next(); restart(); }
+      else if (e.key === 'ArrowRight') { e.preventDefault(); prev(); restart(); }
+    });
+    carousel.addEventListener('pointerdown', e => {
+      if (e.target.closest('button')) return;
+      touching = true;
+      pointerKind = e.pointerType || 'mouse';
+      startX = e.clientX;
+      dx = 0;
+      stop();
+    });
+    carousel.addEventListener('pointermove', e => { if (touching) dx = e.clientX - startX; });
+    const endSwipe = () => {
+      if (!touching) return;
+      touching = false;
+      // Swipe toward the next control (left) advances; swipe right goes back.
+      if (dx <= -48) next();
+      else if (dx >= 48) prev();
+      dx = 0;
+      if (pointerKind === 'touch') paused = false;
+      restart();
+    };
+    carousel.addEventListener('pointerup', endSwipe);
+    carousel.addEventListener('pointercancel', endSwipe);
+    const stop = () => { clearInterval(timer); timer = 0; };
+    const start = () => {
+      stop();
+      if (paused || reduce || slides.length < 2) return;
+      timer = setInterval(next, 6500);
+    };
+    const restart = () => { if (!touching) start(); };
+    carousel.addEventListener('pointerenter', e => {
+      if (e.pointerType === 'touch') return;
+      paused = true;
+      stop();
+    });
+    carousel.addEventListener('pointerleave', () => {
+      paused = carousel.contains(document.activeElement);
+      start();
+    });
+    carousel.addEventListener('focusin', () => { paused = true; stop(); });
+    carousel.addEventListener('focusout', () => {
+      paused = carousel.matches(':hover');
+      start();
+    });
+    document.addEventListener('visibilitychange', () => { document.hidden ? stop() : start(); });
+    show(0);
+    start();
+  }
+
   $('#yr').textContent = new Date().getFullYear();
 })();
