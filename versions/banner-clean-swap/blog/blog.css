@@ -20,3 +20,30 @@
   .blog-grid{grid-template-columns:1fr}
   .blog-hero{min-height:340px}
 }
+
+/* Blog index header. Post pages do not use these. */
+body.blog-index{background:#F8F6F3}
+body.blog-index .header:not(.scrolled) .nav,
+body.blog-index .header:not(.scrolled) .nav a{color:#1c1e22}
+body.blog-index .header:not(.scrolled) .nav a:hover{color:#000}
+body.blog-index .header:not(.scrolled) .btn-ghost{color:#1c1e22;border-color:rgba(28,30,34,.28)}
+body.blog-index .header:not(.scrolled) .burger{border-color:rgba(28,30,34,.28)}
+body.blog-index .header:not(.scrolled) .burger i,
+body.blog-index .header:not(.scrolled) .burger i::before,
+body.blog-index .header:not(.scrolled) .burger i::after{background:#1c1e22}
+.blog-intro{background:#F8F6F3;padding:148px 0 8px;text-align:center}
+.blog-intro h1{font-family:Heebo,Rubik,sans-serif;font-weight:800;font-size:clamp(36px,5vw,64px);line-height:1.15;letter-spacing:-.02em;color:#16181c}
+.blog-intro-sub{margin:14px auto 0;max-width:40em;color:#6d727a;font-size:clamp(15px,1.35vw,18px);font-weight:400}
+.blog-filters{display:flex;justify-content:center;margin:28px auto 0;max-width:100%;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.blog-filters::-webkit-scrollbar{display:none}
+.blog-filters{background:#fff;border:1px solid #e4dfd8;border-radius:999px;padding:5px;width:max-content}
+.blog-filters button{border:0;background:transparent;color:#2a2e33;font-family:inherit;font-size:15px;font-weight:500;padding:10px 18px;border-radius:999px;cursor:pointer;white-space:nowrap}
+.blog-filters button.is-on{background:#6FA8DC;color:#fff}
+.blog-filters button:focus-visible{outline:2px solid #6FA8DC;outline-offset:2px}
+.blog-index-grid{background:#F8F6F3;padding-top:36px}
+.blog-empty{text-align:center;color:#5d646e;margin:8px 0 20px;font-size:16px}
+@media (max-width:700px){
+  .blog-intro{padding-top:128px}
+  .blog-filters{width:100%;flex-wrap:wrap;justify-content:center;overflow:visible;border-radius:28px}
+  .blog-filters button{font-size:14px;padding:9px 14px}
+}
