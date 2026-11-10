@@ -1,0 +1,73 @@
+/* Commercial service preview. Visual system matches versions/banner-clean.
+   Tel Aviv is the live heading face used on that homepage. */
+@font-face{
+  font-family:TelAviv;
+  font-style:normal;
+  font-weight:700;
+  font-display:swap;
+  src:url("assets/fonts/TelAviv-BrutalistBold.woff2") format("woff2");
+}
+.svc h1,.svc h2,.svc h3{
+  font-family:TelAviv,Heebo,sans-serif;
+  font-weight:700;
+  font-synthesis:none;
+  letter-spacing:normal;
+}
+.svc strong{color:var(--aqua);font-weight:700}
+.svc-hero{
+  position:relative;
+  min-height:640px;
+  display:flex;
+  align-items:flex-end;
+  overflow:hidden;
+  background:#0a0b0d;
+  color:#fff;
+}
+.svc-hero picture,.svc-hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
+.svc-hero::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(180deg,rgba(5,6,8,.62) 0%,rgba(5,6,8,.18) 42%,rgba(5,6,8,.9) 100%),linear-gradient(270deg,rgba(5,6,8,.45),transparent 55%);
+}
+.svc-hero .wrap{position:relative;z-index:2;padding:150px 0 72px}
+.svc-hero h1{font-size:clamp(46px,6vw,84px);line-height:1.02;max-width:12em}
+.svc-hero p{margin-top:18px;max-width:34em;font-size:clamp(17px,1.5vw,21px);font-weight:300;color:rgba(255,255,255,.88)}
+.svc-split{background:var(--light);color:var(--ink)}
+.svc-split .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:center}
+.svc-split h2{font-size:clamp(34px,4vw,56px);line-height:1.08}
+.svc-split .copy p{margin-top:18px;font-size:17px;line-height:1.7;color:var(--muted-d);font-weight:400}
+.svc-split .copy a{color:var(--aqua)}
+.svc-split .copy a:hover{color:#1aa4d6}
+.svc-split .frame{border-radius:var(--r-lg);overflow:hidden;background:#e7eaee}
+.svc-split .frame img{width:100%;height:auto;object-fit:contain}
+.svc-film{position:relative;min-height:640px;display:flex;align-items:flex-end;overflow:hidden;background:#07080a;color:#fff}
+.svc-film video{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:#07080a}
+.svc-film::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(5,6,8,.35),rgba(5,6,8,.78))}
+.svc-film .wrap{position:relative;z-index:2;padding:120px 0 72px}
+.svc-film h2{font-size:clamp(34px,4.4vw,60px);line-height:1.08;max-width:14em}
+.svc-film p{margin-top:16px;max-width:36em;font-size:18px;color:rgba(255,255,255,.86);font-weight:300}
+.svc-film .btn{margin-top:28px}
+.svc-cards{background:var(--bg);color:#fff}
+.svc-cards h2{font-size:clamp(34px,4vw,56px);line-height:1.08;text-align:center}
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:42px}
+.svc-card{background:var(--card);border:1px solid var(--line);border-radius:var(--r-lg);padding:28px 26px 30px;display:flex;flex-direction:column;gap:16px}
+.svc-card img{width:72px;height:56px;object-fit:contain;object-position:right center}
+.svc-card h3{font-size:24px;line-height:1.2}
+.svc-card p{color:var(--muted);font-size:15.5px;line-height:1.6}
+.svc-more{background:var(--light);color:var(--ink)}
+.svc-more h2{font-size:clamp(34px,4vw,56px);line-height:1.08}
+.svc-more-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:36px}
+.svc-more a{display:flex;flex-direction:column;background:#fff;border-radius:var(--r-lg);overflow:hidden;min-height:100%;color:var(--ink)}
+.svc-more a:hover{transform:translateY(-3px)}
+.svc-more .pic{background:#dfe3e8;aspect-ratio:16/10;display:grid}
+.svc-more .pic img{width:100%;height:100%;object-fit:contain}
+.svc-more .cap{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:18px 18px 20px;font-weight:600;font-size:18px;min-width:0}
+.svc-more .cap{overflow-wrap:anywhere}
+.svc-more .cap svg{width:18px;height:18px;flex:none}
+@media (max-width:900px){
+  .svc-split .wrap,.svc-grid,.svc-more-grid{grid-template-columns:1fr}
+  .svc-hero{min-height:520px}
+  .svc-hero .wrap{padding:128px 0 48px}
+  .svc-film{min-height:520px}
+}
