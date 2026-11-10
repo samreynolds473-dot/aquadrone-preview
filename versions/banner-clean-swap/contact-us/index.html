@@ -10,8 +10,9 @@
 <link rel="icon" href="../assets/logos/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="preload" as="image" href="../assets/img/hero-poster.jpg">
+<link rel="preload" as="image" href="../assets/img/contact-hero-1600.webp" type="image/webp">
 <link rel="stylesheet" href="../styles.css?v=2">
+<link rel="stylesheet" href="contact.css?v=1">
 </head>
 <body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -67,8 +68,11 @@
 </div>
 
 <main>
-<section class="page-hero">
- <img class="bg" src="../assets/img/hero-poster.jpg" alt="">
+<section class="page-hero page-hero-compact">
+ <picture>
+  <source type="image/webp" srcset="../assets/img/contact-hero-1600.webp 1600w, ../assets/img/contact-hero-2400.webp 2400w" sizes="100vw">
+  <img class="bg" src="../assets/img/contact-hero-1600.jpg" srcset="../assets/img/contact-hero-1600.jpg 1600w, ../assets/img/contact-hero-2400.jpg 2400w" sizes="100vw" alt="רחפן מרסס חזית זכוכית של מגדל" width="2400" height="1800">
+ </picture>
  <div class="wrap">
   <nav class="crumbs" aria-label="מיקום בעמוד"><a href="../">דף הבית</a><span aria-hidden="true">/</span><span aria-current="page">צור קשר</span></nav>
   <p class="eyebrow">Contact</p>
