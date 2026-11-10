@@ -2,8 +2,8 @@
   const $ = (s, r = document) => r.querySelector(s), $$ = (s, r = document) => [...r.querySelectorAll(s)];
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  // hero video: desktop/portrait pair; reduced motion keeps the poster
-  $$('.hero-vid').forEach(v => {
+  // #air panel: wide on desktop, portrait on mobile; reduced motion keeps the poster
+  $$('.air-vid').forEach(v => {
     if (!reduce) return;
     v.removeAttribute('autoplay');
     v.pause();
@@ -13,13 +13,13 @@
   });
   if (!reduce) {
     const wide = matchMedia('(min-width: 821px)');
-    const syncHero = () => $$('.hero-vid').forEach(v => {
-      const on = v.classList.contains('hero-vid-wide') ? wide.matches : !wide.matches;
+    const syncAir = () => $$('.air-vid').forEach(v => {
+      const on = v.classList.contains('air-vid-wide') ? wide.matches : !wide.matches;
       if (on) v.play().catch(() => {});
       else v.pause();
     });
-    syncHero();
-    wide.addEventListener('change', syncHero);
+    syncAir();
+    wide.addEventListener('change', syncAir);
   }
 
   // header
