@@ -1,0 +1,20 @@
+/* Layout only. Visual components come from the banner-clean-swap styles. */
+.hero picture{position:absolute;inset:0;display:block}
+.hero picture img{width:100%;height:100%;object-fit:cover;object-position:center}
+.svc-split{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:center}
+.svc-split .frame{border-radius:var(--r-lg);overflow:hidden;background:#111}
+.svc-split .frame img{width:100%;height:auto;object-fit:contain;background:#111}
+.svc-film .media-card{margin-top:48px;aspect-ratio:16/9}
+.svc-film .media-card video{position:absolute;inset:0;object-fit:contain;background:#07080a}
+.bcard .icon img{width:30px;height:30px;object-fit:contain}
+.rel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:40px}
+.rel-grid a{display:flex;flex-direction:column;background:var(--lcard);border-radius:var(--r-lg);overflow:hidden;color:var(--ink);min-width:0}
+.rel-grid a:hover{transform:translateY(-4px)}
+.rel-grid .pic{background:#d7dde3;aspect-ratio:16/10}
+.rel-grid img{width:100%;height:100%;object-fit:contain}
+.rel-grid .cap{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:18px 20px 22px;font-weight:600;font-size:18px;min-width:0}
+.rel-grid .cap svg{width:18px;height:18px;flex:none}
+@media (max-width:900px){
+  .svc-split,.rel-grid{grid-template-columns:1fr}
+  .svc-film .media-card{min-height:220px}
+}
