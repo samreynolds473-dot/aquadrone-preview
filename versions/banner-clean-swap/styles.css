@@ -150,12 +150,6 @@ section{position:relative}
 .ba .lbl{position:absolute;top:18px;z-index:2;font-size:12px;letter-spacing:.14em;background:rgba(0,0,0,.55);backdrop-filter:blur(6px);padding:7px 13px;border-radius:999px;font-family:var(--num)}
 .ba .lbl.l{left:18px}.ba .lbl.r{right:18px}
 .ba-mini-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px}
-.ba-sm{aspect-ratio:1800/1012}
-.ba-sm img{object-fit:cover;object-position:center}
-.ba-sm .handle span{width:42px;height:42px}
-.ba-sm .handle svg{width:20px;height:20px}
-.ba-sm .lbl{top:10px;padding:6px 10px}
-.ba-sm .lbl.l{left:10px}.ba-sm .lbl.r{right:10px}
 .ba-ph-before,.ba-ph-after{position:absolute;inset:0}
 .ba-ph-before{background:linear-gradient(160deg,#2c3138,#16191d)}
 .ba-ph-after{background:linear-gradient(160deg,#3c444e,#22262c)}
