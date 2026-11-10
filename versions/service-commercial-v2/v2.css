@@ -73,7 +73,7 @@
   color:#0f1115;
 }
 @media (max-width:1300px){
-  .hero picture img.poster{filter:none}
+  .hero picture img.poster{object-position:22% 60%}
 }
 .svc-split{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:center}
 .svc-split .frame{border-radius:var(--r-lg);overflow:hidden;background:#111}
