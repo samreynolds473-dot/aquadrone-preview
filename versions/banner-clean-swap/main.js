@@ -64,9 +64,8 @@
     b.setAttribute('aria-expanded', open);
   }));
 
-  // before/after
-  const ba = $('#ba');
-  if (ba) {
+  // before/after — every .ba slider, including the small row
+  $$('.ba').forEach(ba => {
     let drag = false;
     const set = p => { p = Math.max(2, Math.min(98, p)); ba.style.setProperty('--pos', p + '%'); ba.setAttribute('aria-valuenow', Math.round(p)); };
     const fromEvt = e => { const r = ba.getBoundingClientRect(); set(((e.clientX - r.left) / r.width) * 100); };
@@ -77,7 +76,7 @@
       const cur = parseFloat(getComputedStyle(ba).getPropertyValue('--pos')) || 50;
       if (e.key === 'ArrowLeft') set(cur - 4); if (e.key === 'ArrowRight') set(cur + 4);
     });
-  }
+  });
 
   // lead form — PREVIEW ONLY, not wired to any backend
   const form = $('#leadForm');
