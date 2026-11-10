@@ -81,7 +81,7 @@ section{position:relative}
 /* sectors */
 .sectors .wrap{display:block}
 .svc-intro{max-width:720px;margin-inline:auto}
-.svc-intro .eyebrow{font-family:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;letter-spacing:.16em}
+.svc-intro .eyebrow{font-family:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;letter-spacing:.16em;color:#0b6e96}
 .svc-intro .lead{margin:18px auto 28px}
 .svc-cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-top:52px}
 .svc-photo{position:relative;display:block;aspect-ratio:3/4.15;border-radius:22px;overflow:hidden;background:#d5dbe1;color:#fff;min-width:0}
