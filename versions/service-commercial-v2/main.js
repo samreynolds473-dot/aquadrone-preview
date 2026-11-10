@@ -2,9 +2,25 @@
   const $ = (s, r = document) => r.querySelector(s), $$ = (s, r = document) => [...r.querySelectorAll(s)];
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  // hero video: pick resolution
-  const hv = $('#heroVideo');
-  if (hv) { hv.src = innerWidth < 820 ? hv.dataset.srcMobile : hv.dataset.srcDesktop; hv.play().catch(() => {}); }
+  // hero video: desktop/portrait pair; reduced motion keeps the poster
+  $$('.hero-vid').forEach(v => {
+    if (!reduce) return;
+    v.removeAttribute('autoplay');
+    v.pause();
+    v.removeAttribute('src');
+    $$('source', v).forEach(s => s.remove());
+    v.load();
+  });
+  if (!reduce) {
+    const wide = matchMedia('(min-width: 821px)');
+    const syncHero = () => $$('.hero-vid').forEach(v => {
+      const on = v.classList.contains('hero-vid-wide') ? wide.matches : !wide.matches;
+      if (on) v.play().catch(() => {});
+      else v.pause();
+    });
+    syncHero();
+    wide.addEventListener('change', syncHero);
+  }
 
   // header
   const header = $('#header');

@@ -1,33 +1,64 @@
 /* Layout only. Visual components come from the banner-clean-swap styles. */
 .hero{
   display:flex;
-  align-items:stretch;
-  height:400px;
-  min-height:400px;
-  max-height:400px;
+  align-items:flex-end;
+  justify-content:center;
+  height:500px;
+  min-height:500px;
+  max-height:500px;
+  background:var(--bg);
 }
 .hero::after{
   background:
-    linear-gradient(180deg,rgba(5,6,8,.48) 0%,rgba(5,6,8,.12) 42%,rgba(5,6,8,.62) 100%),
-    linear-gradient(270deg,rgba(5,6,8,.4),transparent 58%);
+    radial-gradient(130% 100% at 50% 46%,transparent 42%,rgba(67,195,243,.16) 100%),
+    linear-gradient(180deg,rgba(5,6,8,.32) 0%,rgba(5,6,8,.14) 30%,rgba(5,6,8,.62) 64%,rgba(5,6,8,.9) 86%,var(--bg) 100%);
 }
-.hero picture{position:absolute;inset:0;display:block}
-.hero picture img.poster{width:100%;height:100%;object-fit:cover;object-position:center 58%;filter:brightness(4.2) contrast(1.08) saturate(1.05)}
+.hero video,
+.hero-still,
+.hero-still img{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:22% 18%;
+}
+.hero-vid-port,.hero-still{display:none}
 .hero-grid,.hero-foot{display:none}
 .hero .wrap{
-  height:100%;
-  padding-top:108px;
-  padding-bottom:28px;
-  justify-content:flex-end;
+  position:relative;
+  z-index:2;
+  height:auto;
+  display:flex;
+  justify-content:center;
+  align-items:flex-end;
+  padding:120px 0 48px;
 }
-.hero-split{margin-top:0;align-items:end}
+.hero-copy{display:flex;flex-direction:column;align-items:center;gap:16px;max-width:980px;text-align:center}
 .hero h1{
   top:0;
-  font-size:clamp(48px,4.2vw,60px);
-  line-height:1.05;
+  padding:0;
+  margin:0;
+  text-align:center;
+  font-family:TelAviv,Heebo,sans-serif;
+  font-weight:700;
+  font-synthesis:none;
+  font-size:clamp(38px,4.25vw,62px);
+  line-height:1.11;
+  letter-spacing:normal;
 }
-.hero h1 span,.hero-side{animation:none;opacity:1;transform:none}
-.hero-side{gap:14px;padding-bottom:0}
+.hero h1 span{display:block;white-space:normal}
+.hero h1 .accent{color:var(--aqua)}
+.hero h1 span,.hero-copy{animation:none;opacity:1;transform:none}
+.hero-copy p{
+  margin:0;
+  max-width:38em;
+  font-family:"IBM Plex Sans Hebrew",Heebo,sans-serif;
+  font-weight:400;
+  font-size:clamp(15px,1.15vw,18px);
+  line-height:1.5;
+  color:#9aa3ad;
+}
 .prop-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px 20px}
 .prop-tile{
   background:transparent;
@@ -53,8 +84,19 @@
 }
 .prop-tile .icon svg{width:88px;height:88px}
 .prop-label{font-weight:600;font-size:30px;line-height:1.25;color:var(--ink)}
-@media (max-width:1300px){
-  .hero picture img.poster{filter:none}
+@media (max-width:820px){
+  .hero{height:440px;min-height:440px;max-height:440px}
+  .hero-vid-wide{display:none}
+  .hero-vid-port{display:block}
+  .hero video,.hero-still img{object-position:18% 14%}
+  .hero .wrap{padding:108px 0 28px}
+  .hero h1{font-size:clamp(30px,8.1vw,36px)}
+  .hero-copy{gap:12px}
+  .hero-copy p{font-size:14.5px}
+}
+@media (prefers-reduced-motion:reduce){
+  .hero video{display:none}
+  .hero-still{display:block}
 }
 .svc-split{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:center}
 .svc-split .frame{border-radius:var(--r-lg);overflow:hidden;background:#111}
@@ -74,12 +116,6 @@
   .svc-film .media-card{min-height:220px}
 }
 @media (max-width:820px){
-  .hero{height:280px;min-height:280px;max-height:280px}
-  .hero .wrap{padding-top:92px;padding-bottom:16px}
-  .hero h1{font-size:32px}
-  .hero-side{gap:10px}
-  .hero-side p{font-size:14px;line-height:1.45}
-  .hero .btn{padding:8px 14px;font-size:13.5px}
   .prop-grid{gap:22px 12px}
   .prop-tile{padding:4px 4px 0;gap:12px}
   .prop-tile .icon svg{width:64px;height:64px}
