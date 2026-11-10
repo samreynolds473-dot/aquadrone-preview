@@ -4,7 +4,7 @@
   min-height:380px;
   max-height:380px;
 }
-.page-hero.page-hero-compact .bg{object-position:82% 18%}
+.page-hero.page-hero-compact .bg{object-position:82% 72%}
 .page-hero.page-hero-compact::after{
   background:
     linear-gradient(180deg,rgba(5,6,8,.55) 0%,rgba(5,6,8,.16) 36%,rgba(5,6,8,.78) 100%),
