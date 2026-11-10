@@ -251,8 +251,8 @@ section{position:relative}
 
 /* contact */
 .contact{position:relative;overflow:hidden}
-.contact{background:#101318 url("assets/img/footer-facade-poster.jpg") 18% 50% / cover no-repeat}
-.contact video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:18% 50%;opacity:.55}
+.contact{background:#101318 url("assets/img/contact-original-poster.jpg") center / cover no-repeat}
+.contact video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:.55}
 .contact::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(270deg,rgba(10,11,13,.9) 0%,rgba(10,11,13,.6) 50%,rgba(10,11,13,.85) 100%),linear-gradient(180deg,var(--bg) 0%,transparent 20%,transparent 80%,var(--bg) 100%)}
 .contact .wrap{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
 .contact h2{font-size:clamp(40px,5vw,72px);font-weight:600;line-height:1.02;letter-spacing:-.02em}
