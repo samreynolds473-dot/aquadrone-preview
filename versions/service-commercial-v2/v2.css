@@ -78,16 +78,10 @@
 .svc-split{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:center}
 .svc-split .frame{border-radius:var(--r-lg);overflow:hidden;background:#111}
 .svc-split .frame img{width:100%;height:auto;object-fit:contain;background:#111}
-.svc-film .media-card{margin-top:0;aspect-ratio:16/9}
-.air-panel{display:block}
+.svc-film .media-card{margin-top:48px;aspect-ratio:16/9}
 .air-panel video,.air-still,.air-still img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:22% 18%}
 .air-vid-port,.air-still{display:none}
-.air-panel::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(180deg,rgba(5,6,8,.28) 0%,rgba(5,6,8,.45) 42%,rgba(5,6,8,.78) 100%)}
-.air-copy{position:absolute;inset:0;z-index:2;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:16px;padding:36px 24px}
-.air-title{margin:0;color:#fff;font-family:TelAviv,Heebo,sans-serif;font-weight:700;font-synthesis:none;letter-spacing:normal;font-size:clamp(34px,4vw,56px);line-height:1.11}
-.air-title span{display:block}
-.air-title .accent{color:var(--aqua)}
-.air-copy p{margin:0;max-width:36em;color:#b7c0c8;font-size:clamp(15px,1.2vw,18px);line-height:1.5}
+.air-panel::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(180deg,rgba(10,11,13,.72) 0%,rgba(10,11,13,.18) 28%,rgba(10,11,13,.18) 70%,rgba(10,11,13,.55) 100%)}
 .bcard .icon img{width:30px;height:30px;object-fit:contain}
 .rel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:40px}
 .rel-grid a{display:flex;flex-direction:column;background:var(--lcard);border-radius:var(--r-lg);overflow:hidden;color:var(--ink);min-width:0}
@@ -109,9 +103,7 @@
   .hero .btn{padding:8px 14px;font-size:13.5px}
   .air-vid-wide{display:none}
   .air-vid-port{display:block}
-  .air-panel{aspect-ratio:3/4}
   .air-panel video,.air-still img{object-position:18% 16%}
-  .air-title{font-size:clamp(28px,7.4vw,34px)}
   .prop-tile{padding:20px 10px 16px}
   .prop-tile .icon svg{width:72px;height:72px}
   .prop-kicker{font-size:10px;letter-spacing:.14em}
