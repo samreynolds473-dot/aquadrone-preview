@@ -11,7 +11,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+Hebrew:wght@400;500;600;700&family=Rubik:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="preload" as="image" href="assets/img/hero-poster.jpg">
-<link rel="stylesheet" href="styles.css?v=12">
+<link rel="stylesheet" href="styles.css?v=13">
 <link rel="stylesheet" href="swap.css?v=5">
 <link rel="stylesheet" href="home-nav.css?v=1">
 <link rel="stylesheet" href="home-hero.css?v=10">
@@ -169,15 +169,17 @@
    </div>
   </div>
   <div class="ba-mini-row">
-   <div class="ba ba-sm rv" id="ba-2" style="--pos:50%" role="slider" aria-label="השוואת גג כיפה לפני ואחרי" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" tabindex="0">
-    <img src="assets/img/dome-before.jpg" alt="גג כיפה לפני ניקוי" width="1800" height="1012" loading="lazy">
-    <div class="after-wrap"><img src="assets/img/dome-after.jpg" alt="גג כיפה אחרי ניקוי" width="1800" height="1012" loading="lazy"></div>
+   <!-- TODO: ba-2 photos — set data-before and data-after, then use those srcs on the before/after panels. -->
+   <div class="ba rv" id="ba-2" data-before="" data-after="" style="--pos:50%" role="slider" aria-label="השוואת לפני ואחרי" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" tabindex="0">
+    <div class="ba-ph-before" data-slot="before"></div>
+    <div class="after-wrap"><div class="ba-ph-after" data-slot="after"></div></div>
     <span class="lbl l">לפני</span><span class="lbl r">אחרי</span>
     <div class="handle"><span><svg><use href="#i-lr"/></svg></span></div>
    </div>
-   <div class="ba ba-sm ba-ph rv d2" id="ba-3" style="--pos:50%" role="slider" aria-label="השוואת לפני ואחרי" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" tabindex="0">
-    <div class="ba-ph-before"></div>
-    <div class="after-wrap"><div class="ba-ph-after"></div></div>
+   <!-- TODO: ba-3 photos — set data-before and data-after, then use those srcs on the before/after panels. -->
+   <div class="ba rv d2" id="ba-3" data-before="" data-after="" style="--pos:50%" role="slider" aria-label="השוואת לפני ואחרי" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" tabindex="0">
+    <div class="ba-ph-before" data-slot="before"></div>
+    <div class="after-wrap"><div class="ba-ph-after" data-slot="after"></div></div>
     <span class="lbl l">לפני</span><span class="lbl r">אחרי</span>
     <div class="handle"><span><svg><use href="#i-lr"/></svg></span></div>
    </div>
