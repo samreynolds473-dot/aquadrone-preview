@@ -273,6 +273,11 @@ section{position:relative}
 .footer ul{list-style:none;display:flex;flex-direction:column;gap:10px;font-size:15px}
 .footer ul a:hover{color:var(--aqua)}
 .footer .bottom{display:flex;justify-content:space-between;align-items:center;margin-top:80px;padding-top:26px;border-top:1px solid var(--line);font-size:12.5px;color:var(--muted);gap:20px;flex-wrap:wrap}
+.footer-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(220px,300px);gap:48px;align-items:stretch}
+.footer-film{position:relative;min-height:520px;border-radius:var(--r-lg);overflow:hidden;background:#101318 url("assets/img/footer-facade-poster.jpg") 78% 14% / cover no-repeat}
+.footer-film video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:78% 14%}
+.footer-film::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,rgba(10,11,13,.18),transparent 30%,transparent 68%,rgba(10,11,13,.5))}
+.footer-layout .bottom{margin-top:48px}
 .socials{display:flex;gap:8px}
 .socials a{width:36px;height:36px;border-radius:9px;background:#1b1f25;display:grid;place-items:center;transition:background .25s}
 .socials a:hover{background:var(--aqua);color:#04151d}
@@ -286,7 +291,7 @@ section{position:relative}
 .hero h1 span:nth-child(2){animation-delay:.12s}.hero h1 span:nth-child(3){animation-delay:.24s}
 .hero-side{opacity:0;animation:up 1s .45s cubic-bezier(.2,.7,.2,1) forwards}
 @keyframes up{to{opacity:1;transform:none}}
-@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv,.hero h1 span,.hero-side{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv,.hero h1 span,.hero-side{opacity:1;transform:none}.footer-film video{display:none}}
 
 /* responsive */
 @media (max-width:1100px){
@@ -394,6 +399,8 @@ section{position:relative}
   .contact .wrap{grid-template-columns:1fr;gap:40px}
   .form{padding:24px}.row2{grid-template-columns:1fr}
   .footer .top{grid-template-columns:1fr 1fr}.footer .brand{grid-column:1/-1}
+  .footer-layout{grid-template-columns:1fr;gap:28px}
+  .footer-film{order:-1;min-height:0;aspect-ratio:3/4}
   .marquee img{height:34px}.marquee .track{gap:56px}
   .page-hero{min-height:520px}
   .page-hero .wrap{padding:124px 0 48px}
