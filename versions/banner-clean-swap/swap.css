@@ -24,7 +24,11 @@
 .sys-row .sys-trio img:nth-child(2){object-position:62% 42%}
 .sys-row .sys-trio img:nth-child(3){object-position:50% 46%}
 .surfaces.surfaces-accent span{
-  background:var(--aqua);
-  border-color:var(--aqua);
-  color:#04151d;
+  background:transparent;
+  border:2px solid #68C1EE;
+  color:#fff;
+  transition:background .2s ease;
+}
+.surfaces.surfaces-accent span:hover{
+  background:rgba(104,193,238,.14);
 }
