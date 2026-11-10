@@ -6,6 +6,16 @@
   const hv = $('#heroVideo');
   if (hv) { hv.src = innerWidth < 820 ? hv.dataset.srcMobile : hv.dataset.srcDesktop; hv.play().catch(() => {}); }
 
+  // footer portrait: reduced motion keeps the poster only
+  const fv = $('.footer-film video');
+  if (fv && reduce) {
+    fv.removeAttribute('autoplay');
+    fv.pause();
+    fv.removeAttribute('src');
+    $$('source', fv).forEach(s => s.remove());
+    fv.load();
+  }
+
   // header
   const header = $('#header');
   const onScroll = () => header.classList.toggle('scrolled', scrollY > 30);
