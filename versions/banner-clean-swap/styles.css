@@ -362,6 +362,11 @@ section{position:relative}
 .info-item strong,.info-item a{display:block;font-size:17px;font-weight:600;line-height:1.35;text-align:right;overflow-wrap:anywhere}
 .info-item a:hover{color:var(--aqua)}
 .info-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.soc-line{display:flex;flex-wrap:wrap;align-items:center;gap:14px}
+.soc-row{display:flex;direction:ltr;flex-wrap:wrap;align-items:center;gap:10px}
+.soc-row a{width:52px;height:52px;border-radius:14px;background:#1a1d22;border:1px solid rgba(255,255,255,.08);color:#9aa3ad;display:grid;place-items:center;transition:color .2s,border-color .2s,box-shadow .2s}
+.soc-row a svg{width:22px;height:22px}
+.soc-row a:hover,.soc-row a:focus-visible{color:#68C1EE;border-color:rgba(104,193,238,.75);box-shadow:0 0 0 1px rgba(104,193,238,.28),0 0 16px rgba(104,193,238,.28)}
 .subhead{margin-top:56px}
 .values{margin-top:18px}
 
@@ -407,6 +412,8 @@ section{position:relative}
   .contact .wrap{grid-template-columns:1fr;gap:40px}
   .form{padding:24px}.row2{grid-template-columns:1fr}
   .footer .top{grid-template-columns:1fr 1fr}.footer .brand{grid-column:1/-1}
+  .soc-row a{width:44px;height:44px;border-radius:12px}
+  .soc-row a svg{width:18px;height:18px}
   .marquee img{height:34px}.marquee .track{gap:56px}
   .page-hero{min-height:520px}
   .page-hero .wrap{padding:124px 0 48px}
