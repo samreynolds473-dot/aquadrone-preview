@@ -22,6 +22,13 @@
 }
 
 /* Blog index header. Post pages do not use these. */
+@font-face{
+  font-family:TelAviv;
+  font-style:normal;
+  font-weight:700;
+  font-display:swap;
+  src:url("../assets/fonts/TelAviv-BrutalistBold.woff2") format("woff2");
+}
 body.blog-index{background:#F8F6F3}
 body.blog-index .header:not(.scrolled) .nav,
 body.blog-index .header:not(.scrolled) .nav a{color:#1c1e22}
@@ -32,7 +39,7 @@ body.blog-index .header:not(.scrolled) .burger i,
 body.blog-index .header:not(.scrolled) .burger i::before,
 body.blog-index .header:not(.scrolled) .burger i::after{background:#1c1e22}
 .blog-intro{background:#F8F6F3;padding:148px 0 8px;text-align:center}
-.blog-intro h1{font-family:Heebo,Rubik,sans-serif;font-weight:800;font-size:clamp(36px,5vw,64px);line-height:1.15;letter-spacing:-.02em;color:#16181c}
+.blog-intro h1{font-family:TelAviv,Heebo,sans-serif;font-weight:700;font-synthesis:none;font-size:clamp(36px,5vw,64px);line-height:1.15;letter-spacing:-.04em;color:#16181c}
 .blog-intro-sub{margin:14px auto 0;max-width:40em;color:#6d727a;font-size:clamp(15px,1.35vw,18px);font-weight:400}
 .blog-filters{display:flex;justify-content:center;margin:28px auto 0;max-width:100%;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
 .blog-filters::-webkit-scrollbar{display:none}
