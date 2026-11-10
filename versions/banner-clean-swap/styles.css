@@ -149,6 +149,16 @@ section{position:relative}
 .ba .handle svg{width:24px;height:24px}
 .ba .lbl{position:absolute;top:18px;z-index:2;font-size:12px;letter-spacing:.14em;background:rgba(0,0,0,.55);backdrop-filter:blur(6px);padding:7px 13px;border-radius:999px;font-family:var(--num)}
 .ba .lbl.l{left:18px}.ba .lbl.r{right:18px}
+.ba-mini-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px}
+.ba-sm{aspect-ratio:1800/1012}
+.ba-sm img{object-fit:cover;object-position:center}
+.ba-sm .handle span{width:42px;height:42px}
+.ba-sm .handle svg{width:20px;height:20px}
+.ba-sm .lbl{top:10px;padding:6px 10px}
+.ba-sm .lbl.l{left:10px}.ba-sm .lbl.r{right:10px}
+.ba-ph-before,.ba-ph-after{position:absolute;inset:0}
+.ba-ph-before{background:linear-gradient(160deg,#2c3138,#16191d)}
+.ba-ph-after{background:linear-gradient(160deg,#3c444e,#22262c)}
 .media-card{position:relative;border-radius:var(--r-lg);overflow:hidden;background:#111}
 .media-card video{width:100%;height:100%;object-fit:cover}
 .media-card .cap{position:absolute;inset-inline:0;bottom:0;padding:26px;background:linear-gradient(0deg,rgba(0,0,0,.85),transparent)}
@@ -393,7 +403,7 @@ section{position:relative}
   .scene{height:560px;min-height:0}
   .hotspot .tag{font-size:12px;padding:6px 10px}
   .benefits{grid-template-columns:1fr}
-  .ba-grid{grid-template-columns:1fr}
+  .ba-grid,.ba-mini-row{grid-template-columns:1fr}
   .media-card{aspect-ratio:4/5}
   .pb-grid{grid-template-columns:1fr}
   .pcard .icon{margin-bottom:20px}
