@@ -1,0 +1,25 @@
+/* Compact contact hero only. Other inner pages keep the shared page-hero size. */
+.page-hero.page-hero-compact{
+  height:380px;
+  min-height:380px;
+  max-height:380px;
+}
+.page-hero.page-hero-compact .bg{object-position:82% 18%}
+.page-hero.page-hero-compact::after{
+  background:
+    linear-gradient(180deg,rgba(5,6,8,.55) 0%,rgba(5,6,8,.16) 36%,rgba(5,6,8,.78) 100%),
+    linear-gradient(270deg,rgba(5,6,8,.5),transparent 58%);
+}
+.page-hero.page-hero-compact .wrap{padding:112px 0 28px}
+.page-hero.page-hero-compact h1{font-size:clamp(36px,4vw,52px)}
+.page-hero.page-hero-compact .dek{margin-top:10px;font-size:clamp(15px,1.3vw,18px)}
+@media (max-width:820px){
+  .page-hero.page-hero-compact{
+    height:280px;
+    min-height:280px;
+    max-height:280px;
+  }
+  .page-hero.page-hero-compact .wrap{padding:96px 0 18px}
+  .page-hero.page-hero-compact h1{font-size:32px}
+  .page-hero.page-hero-compact .dek{font-size:15px;margin-top:6px}
+}
