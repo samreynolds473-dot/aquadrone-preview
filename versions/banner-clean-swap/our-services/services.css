@@ -1,0 +1,59 @@
+/* Services index only. The shared site stylesheet is unchanged. */
+@font-face{
+  font-family:TelAviv;
+  font-style:normal;
+  font-weight:700;
+  font-display:swap;
+  src:url("../assets/fonts/TelAviv-BrutalistBold.woff2") format("woff2");
+}
+body.svc-page{background:#f3f5f7}
+body.svc-page .header:not(.scrolled) .nav,
+body.svc-page .header:not(.scrolled) .nav a{color:#1c1e22}
+body.svc-page .header:not(.scrolled) .nav a:hover{color:#000}
+body.svc-page .header:not(.scrolled) .nav a[aria-current="page"]{color:#0b7ea8}
+body.svc-page .header:not(.scrolled) .btn-ghost{color:#1c1e22;border-color:rgba(28,30,34,.28)}
+body.svc-page .header:not(.scrolled) .burger{border-color:rgba(28,30,34,.28)}
+body.svc-page .header:not(.scrolled) .burger i,
+body.svc-page .header:not(.scrolled) .burger i::before,
+body.svc-page .header:not(.scrolled) .burger i::after{background:#1c1e22}
+body.svc-page .svc-open.pad{padding-top:136px}
+body.svc-page .block-head .eyebrow{
+  font-family:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+  font-weight:500;
+  font-size:12px;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  color:#1493c4;
+}
+body.svc-page .block-head .h2{
+  font-family:TelAviv,Heebo,sans-serif;
+  font-weight:700;
+  font-synthesis:none;
+  letter-spacing:-.03em;
+  color:#16181c;
+}
+body.svc-page .block-head .h2 .accent{color:#43c3f3}
+body.svc-page .svc-card h3{
+  font-family:TelAviv,Heebo,sans-serif;
+  font-weight:700;
+  font-synthesis:none;
+  letter-spacing:-.02em;
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+body.svc-page .svc-card h3::before{
+  content:"";
+  width:8px;
+  height:8px;
+  border-radius:2px;
+  background:#43c3f3;
+  box-shadow:0 0 0 4px rgba(67,195,243,.18);
+  flex:none;
+}
+body.svc-page .svc-card .more{color:#0b7ea8}
+body.svc-page .svc-card:hover{box-shadow:0 22px 40px -24px rgba(67,195,243,.7)}
+body.svc-page .svc-card:hover h3{color:#0b7ea8}
+@media (max-width:820px){
+  body.svc-page .svc-open.pad{padding-top:112px}
+}
