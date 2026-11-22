@@ -87,6 +87,7 @@
 .film-source{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap;border:0}
 .film-card{position:absolute;top:0;left:50%;width:var(--card);aspect-ratio:4/3;margin:0;border-radius:16px;overflow:hidden;background:#111;opacity:0;transform:translateX(-50%) scale(.75);transform-origin:center center;transition:transform .55s cubic-bezier(.22,.7,.2,1),opacity .55s ease,filter .55s ease;pointer-events:none;z-index:0;box-shadow:0 12px 28px rgba(0,0,0,.28)}
 .film-card img{width:100%;height:100%;object-fit:cover;object-position:center;display:block;pointer-events:none}
+.film-cap{position:absolute;z-index:2;right:12px;bottom:12px;max-width:calc(100% - 24px);padding:6px 12px;border-radius:999px;background:rgba(8,10,14,.66);color:#fff;font-family:TelAviv,Heebo,sans-serif;font-weight:700;font-synthesis:none;font-size:15px;letter-spacing:-.02em;line-height:1.15;pointer-events:none}
 .film-card.is-center{opacity:1;filter:none;transform:translateX(-50%) scale(1);z-index:3;pointer-events:auto;cursor:default}
 .film-card.is-next,.film-card.is-prev{opacity:.62;filter:brightness(.72);z-index:2;pointer-events:auto;cursor:pointer}
 .film-card.is-next{transform:translateX(calc(-50% - var(--peek))) scale(.75)}
@@ -104,7 +105,10 @@
 .film-dot{width:8px;height:8px;padding:0;border:0;border-radius:50%;background:rgba(255,255,255,.4);cursor:pointer}
 .film-dot.is-active{background:#68C1EE}
 .film-dot:focus-visible{outline:2px solid #fff;outline-offset:2px}
-.air-panel video,.air-still,.air-still img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:22% 18%}
+.air-panel video,.air-still,.air-still img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 92%}
+/* 16/9 footage already fills the 16/9 panel, so object-position alone cannot
+   reveal a lower crop. Scale from the bottom to show the lower part of the frame. */
+.air-panel .air-vid-wide,.air-panel .air-still img{transform:scale(1.25);transform-origin:22% 100%}
 .air-vid-port,.air-still{display:none}
 .air-panel::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(180deg,rgba(5,6,8,.25) 0%,rgba(5,6,8,.55) 46%,rgba(5,6,8,.82) 100%)}
 .air-copy{position:absolute;inset:0;z-index:2;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:14px;padding:36px 28px}
@@ -132,7 +136,8 @@
   .air-vid-wide{display:none}
   .air-vid-port{display:block}
   .air-panel{aspect-ratio:3/4}
-  .air-panel video,.air-still img{object-position:18% 16%}
+  .air-panel .air-vid-wide{transform:none}
+  .air-panel video,.air-panel .air-still img{object-position:center 88%;transform:none}
   .air-copy{padding:28px 16px;gap:12px}
   .air-copy .h2{font-size:clamp(28px,8vw,36px)}
   .air-copy .lead{font-size:15px}
@@ -141,6 +146,7 @@
   .film-nav{top:46%}
   .film-nav{width:34px;height:34px}
   .film-card{border-radius:12px}
+  .film-cap{right:8px;bottom:8px;padding:4px 9px;font-size:13px}
   .prop-tile{padding:20px 10px 16px}
   .prop-tile .icon svg{width:72px;height:72px}
   .prop-kicker{font-size:10px;letter-spacing:.14em}

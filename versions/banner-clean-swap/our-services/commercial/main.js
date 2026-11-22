@@ -109,7 +109,8 @@
     const slides = $$('.film-slide', carousel);
     const sources = slides.map(s => {
       const img = $('img', s);
-      return { src: img.getAttribute('src'), alt: img.getAttribute('alt') || '' };
+      const cap = $('figcaption', s);
+      return { src: img.getAttribute('src'), alt: img.getAttribute('alt') || '', cap: cap ? cap.textContent.trim() : '' };
     });
     const n = sources.length;
     const dotsWrap = $('.film-dots', carousel);
@@ -138,6 +139,12 @@
       img.alt = '';
       img.draggable = false;
       fig.appendChild(img);
+      if (sources[logical].cap) {
+        const label = document.createElement('span');
+        label.className = 'film-cap';
+        label.textContent = sources[logical].cap;
+        fig.appendChild(label);
+      }
       fig.addEventListener('click', () => {
         if (dragged || i === cursor) return;
         cursor = i;
