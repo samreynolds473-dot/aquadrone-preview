@@ -262,8 +262,9 @@ section{position:relative}
 .contact .wrap{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
 .contact h2{font-size:clamp(40px,5vw,72px);font-weight:600;line-height:1.02;letter-spacing:-.02em}
 .contact .lead{margin:24px 0 34px;color:rgba(255,255,255,.75)}
-.wa{display:flex;align-items:center;gap:14px;font-size:15px;color:rgba(255,255,255,.85)}
-.wa .num{font-size:22px;color:#fff;direction:ltr}
+.wa{display:flex;align-items:center;gap:14px;font-size:16px;font-weight:600;color:#fff}
+.wa .num{font-size:22px;font-weight:600;color:#fff;direction:ltr}
+.wa .sub{display:block;margin-top:2px;font-size:13px;font-weight:500;color:rgba(255,255,255,.72);direction:ltr}
 .form{background:rgba(18,21,26,.82);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,.12);border-radius:var(--r-lg);padding:36px}
 .form h3{font-size:22px;font-weight:600;margin-bottom:22px}
 .field{position:relative;margin-bottom:14px}
@@ -372,7 +373,9 @@ section{position:relative}
 .info-item strong,.info-item a{display:block;font-size:17px;font-weight:600;line-height:1.35;text-align:right;overflow-wrap:anywhere}
 .info-item a:hover{color:var(--aqua)}
 .info-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
-.soc-line{display:flex;flex-direction:column;align-items:flex-start;gap:10px}
+.soc-line{display:flex;flex-direction:column;align-items:flex-start;gap:14px}
+.soc-line .icon{width:52px;height:52px;border-radius:14px;background:#1a1d22;border:1px solid rgba(255,255,255,.08);color:#fff;flex:none}
+.soc-line .icon svg{width:22px;height:22px}
 .soc-row{display:flex;direction:ltr;flex-wrap:wrap;align-items:center;gap:10px}
 .soc-row a{width:52px;height:52px;border-radius:14px;background:#1a1d22;border:1px solid rgba(255,255,255,.08);color:#9aa3ad;display:grid;place-items:center;transition:color .2s,border-color .2s,box-shadow .2s}
 .soc-row a svg{width:22px;height:22px}
@@ -424,6 +427,8 @@ section{position:relative}
   .footer .top{grid-template-columns:1fr 1fr}.footer .brand{grid-column:1/-1}
   .soc-row a{width:44px;height:44px;border-radius:12px}
   .soc-row a svg{width:18px;height:18px}
+  .soc-line .icon{width:44px;height:44px;border-radius:12px}
+  .soc-line .icon svg{width:18px;height:18px}
   .marquee img{height:34px}.marquee .track{gap:56px}
   .page-hero{min-height:520px}
   .page-hero .wrap{padding:124px 0 48px}
