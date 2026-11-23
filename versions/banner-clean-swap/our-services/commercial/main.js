@@ -14,7 +14,7 @@
   if (!reduce) {
     const wide = matchMedia('(min-width: 821px)');
     const syncAir = () => $$('.air-vid').forEach(v => {
-      const on = v.classList.contains('air-vid-wide') ? wide.matches : !wide.matches;
+      const on = v.classList.contains('air-vid-wide') ? wide.matches : v.classList.contains('air-vid-port') ? !wide.matches : true;
       if (on) v.play().catch(() => {});
       else v.pause();
     });
